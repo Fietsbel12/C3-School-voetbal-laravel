@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', function () {
-    return view('help_werktdit');
+    return view('help');
 });
 
 require __DIR__.'/auth.php';
