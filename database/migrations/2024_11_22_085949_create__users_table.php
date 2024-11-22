@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_teams', function (Blueprint $table) {
+        Schema::create('_users', function (Blueprint $table) {
             $table->id();
-            $table->creator_id();
-            $table->string('name');
-            $table->integer('points');
             $table->timestamps();
         });
     }
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('_teams');
+        Schema::dropIfExists('_users');
     }
 };
